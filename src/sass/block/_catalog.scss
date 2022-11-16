@@ -1,0 +1,127 @@
+.catalog {
+    padding-bottom: 100px;
+
+    .title {
+        font-size: 30px;
+        color: #0d0d0d;
+        text-align: center;
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 69px;
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    &__tab {
+        margin: 0 5px;
+        width: 220px;
+        height: 50px;
+        transform: skew(338deg);
+        border: 2px solid #d0d0d0;
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 48px;
+        text-transform: uppercase;
+        color: #6b6b6b;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        div {
+            transform: skew(22deg);
+        }
+
+        &_active {
+            background-color: $main-color;
+            border: none;
+            color: #ffffff;
+        }
+    }
+
+    &__content {
+        margin-top: 60px;
+    }
+
+    &-item {
+        width: 300px;
+        height: 440px;
+        border: 2px solid #e8e8e8;
+        padding: 20px;
+
+        &__img {
+            display: block;
+            max-width: 100%;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        &__subtitle,
+        &__descr,
+        &__link {
+            margin-top: 15px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0d0d0d;
+        }
+
+        &__descr {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0d0d0d;
+        }
+
+        &__link {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: underline;
+            color: #c70101;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        hr {
+            background-color: #e8e8e8;
+            margin: 19px 0 21px 0;
+        }
+
+        &__footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__old-price {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #555555;
+            text-decoration: line-through;
+        }
+
+        &__price {
+            margin-top: 3px;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #050505;
+        }
+    }
+}
