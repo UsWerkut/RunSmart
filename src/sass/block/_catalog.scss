@@ -45,14 +45,23 @@
             background-color: $main-color;
             border: none;
             color: #ffffff;
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px;
+            }
         }
     }
 
     &__content {
         display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 60px;
+
+        &_active {
+            display: flex;
+        }
     }
 
     &-item {
@@ -96,17 +105,25 @@
             font-size: 14px;
             font-weight: 700;
             text-decoration: underline;
-            color: #c70101;
+            color: $main-color;
 
             &:hover {
                 color: $main-color;
             }
+        }
 
-            &_active {
-                position: absolute;
-                left: 50%;
-                transform: translateX(calc(-50% - 19px));
-                bottom: 0;
+        &__back {
+            position: absolute;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            bottom: 0;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: underline;
+            color: $main-color;
+
+            &:hover {
+                color: $main-color;
             }
         }
 
@@ -140,12 +157,14 @@
         &__wrapper {
             display: flex;
             width: calc(200% + 40px);
+            transition: .3s all;
         }
 
         &__content {
             width: 50%;
             margin-right: 20px;
             transform: translateX(-110%);
+            transition: .3s;
 
             &_active {
                 transform: translateX(0%);
@@ -161,10 +180,12 @@
             padding-left: 19px;
             margin-bottom: 0;
             list-style-type: none;
-
+            transition: .3s all;
+            
             &_active {
                 margin-left: 0px;
                 transform: translateX(-100%);
+                transition: .3s all;
             }
 
             li {
@@ -174,9 +195,11 @@
                 font-weight: 500;
                 color: #555555;
                 text-align-last: left;
+
                 &:nth-child(n+2) {
                     margin-top: 20px;
                 }
+
                 &::before {
                     content: '';
                     width: 5px;
